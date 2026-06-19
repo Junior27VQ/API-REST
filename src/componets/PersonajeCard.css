@@ -1,0 +1,84 @@
+:root {
+  /* Paleta basada en tu imagen: del teal profundo al violeta oscuro */
+  --ocean-teal: #006D77;
+  --ocean-dark: #558cb6;
+  --ocean-deep: #353372;
+  --ocean-night: #8fb821;
+  --bg-body: #17173b; /* Color de fondo general para mayor contraste */
+}
+
+.grid-container {
+  display: grid;
+  /* Esto crea las columnas automáticas que pediste */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  background-color: var(--bg-body);
+}
+
+.personaje-card {
+  background-color: var(--ocean-deep); /* Tu color base solicitado */
+  border-radius: 12px;
+  color: #f3d2d2;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--ocean-night); /* Borde sutil */
+}
+
+.personaje-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--ocean-teal);
+}
+
+.personaje-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+/* Contenedor del nombre e ID */
+.header-card {
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, ID a la derecha */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header-card h3 {
+    margin: 0;
+    color: #48cae4; /* Un azul cian brillante para el nombre */
+}
+
+.badge-id {
+    background-color: #006D77; /* Tu color de la paleta */
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Las cajas redondeadas para cada info */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo muy sutil */
+    border: 1px solid #3A2E50;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+/* Diferenciación de colores */
+.label {
+    color: #a0a0a0; /* Color gris suave para la etiqueta */
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+.info-box p {
+    margin: 0;
+    color: #ffffff; /* Color blanco para el valor de la API */
+}

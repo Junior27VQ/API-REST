@@ -1,13 +1,26 @@
+import './PersonajeCard.css';
+
 function PersonajeCard({ props }) {
     return (
-        <div>
+        <div className="personaje-card">
             <img src={props.image} alt={props.name} />
-            <div>
-                    <h1>{props.name}</h1>
-                    <p>ID: {props.id}</p>
-                    <p>Estado: {props.status}</p>
-                    <p>Género: {props.gender}</p>
-                    <p>Origen: {props.origin.name}</p>
+            <div className="card-content">
+                {/* Nombre e ID alineados */}
+                <div className="header-card">
+                    <h3>{props.name}</h3>
+                    <span className="badge-id">ID: {props.id}</span>
+                </div>
+
+                {/* Detalles en cajas redondeadas */}
+                <div className="info-box">
+                    <p><span className="label">Estado:</span> {props.status}</p>
+                </div>
+                <div className="info-box">
+                    <p><span className="label">Género:</span> {props.gender}</p>
+                </div>
+                <div className="info-box">
+                    <p><span className="label">Origen:</span> {props.origin.name}</p>
+                </div>
             </div>
         </div>
     )

@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <h1>Personajes de Rick and Morty </h1>
-        <div> 
+        <div className="grid-container"> 
             {rickmorty.map((rick)=>(
                 <PersonajeCard key={rick.id} props={rick} />
             ))}
